@@ -9,11 +9,23 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
+    var name:String = " "
+    var github: String = " "
     
+    @IBOutlet weak var nameLabel: UILabel!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        name.isEmpty ? nameLabel.text = "Name: \(name)" : nameLabel.text = "Name: \(name)"
+        
+        if name.isEmpty{
+            nameLabel.text = "Name: user name"
+        }
+        else {
+            nameLabel.text = "Name: \(name)"
+        }
 
         // Do any additional setup after loading the view.
     }

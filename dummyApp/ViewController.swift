@@ -27,8 +27,8 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         segue.destination.title = myName.text
         
-        let github = myGithub.text
-        let name = myName.text
+        let github = myGithub.text ?? " "
+        let name:String = myName.text ?? " "
         
         if let destinationVC = segue.destination as? SecondViewController {
             destinationVC.name = name
